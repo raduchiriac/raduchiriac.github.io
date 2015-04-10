@@ -1,30 +1,28 @@
-<a href="#" class="sb-toggle-left">Menu
-    <span class="nav-icon"></span>
+<a href="#" class="sb-toggle-right">
+    <i class="fa fa-bars"></i>
 </a>
-
-<div class="sb-slidebar sb-left sb-style-push">
+<div class="sb-slidebar sb-right sb-style-push">
     <nav>
         <a href="{{ site.baseurl }}/"><h2 class="site-title">{{ site.title }}</h2></a>
         <ul class="sb-menu">
-        {% assign pages_list = site.pages | sort:"url" %}
-        {% for node in pages_list %}
-            {% if node.title != null %}
-                {% if node.layout == "page" %}
-                <li class="sb-close {% if page.url == node.url %}active{% endif %}">
-                    <a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-                </li>
+            {% assign pages_list = site.pages | sort:"url" %}
+            {% for node in pages_list %}
+                {% if node.title != null %}
+                    {% if node.layout == "page" %}
+                        <li class="sb-close {% if page.url == node.url %}active{% endif %}">
+                        <a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+                    </li>
                 {% endif %}
             {% endif %}
         {% endfor %}
-        </ul>
-
-        <div class="site-info">
-            <p>
-                {{ site.title }} &dash; Copyright &copy; {{ site.time | date: '%Y' }}
-            </p>
-            <p>
-                Powered by Jekyll using <a href="http://github.com/SalGnt/Travelogue">Travelogue</a>
-            </p>
-        </div>
-    </nav>
+    </ul>
+    <div class="site-info">
+        <p>
+            {{ site.title }} &dash; Copyright &copy; {{ site.time | date: '%Y' }}
+        </p>
+        <p>
+            Powered by Jekyll using <a href="http://github.com/SalGnt/Travelogue">Travelogue</a>
+        </p>
+    </div>
+</nav>
 </div>

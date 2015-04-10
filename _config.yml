@@ -1,9 +1,9 @@
 # Site settings
-title: Lenglog
+title: Radu Chiriac
 email: contact@raduchiriac.me
 
 baseurl: '' # the subpath of your site, e.g. /blog/
-url: 'http://yourdomain.com' # the base hostname & protocol for your site
+url: 'http://raduchiriac.me/blog' # the base hostname & protocol for your site
 
 # Build settings
 markdown:            kramdown

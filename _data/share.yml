@@ -3,8 +3,8 @@ facebook: true
 twitter: true
 googleplus: true
 linkedin: false
-reddit: true
+reddit: false
 pinterest: false
 tumblr: false
-pocket: true
-email: false
+pocket: false
+email: true

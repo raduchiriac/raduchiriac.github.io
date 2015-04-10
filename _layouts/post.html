@@ -1,13 +1,15 @@
 ---
 layout: default
 ---
+<a href="{{ site.baseurl }}/"><div class="post-back-home">HOME</div></a>
 <div class="post">
     {% if page.reading_time %}
-    <p class="post-reading-time">&#126;
+    <p class="post-reading-time">
         {% capture words %}
           {{ content | number_of_words | minus: 180 }}
         {% endcapture %}
         {% unless words contains "-" %}
+          reading time <i class="fa fa-clock-o"></i>
           {{ words | plus: 180 | divided_by: 180 | append: " min" }}
         {% endunless %}
     </p>
