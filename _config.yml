@@ -3,7 +3,7 @@ title: Radu Chiriac
 email: contact@raduchiriac.me
 
 baseurl: '' # the subpath of your site, e.g. /blog/
-url: 'http://raduchiriac.me/blog' # the base hostname & protocol for your site
+url: 'http://blog.raduchiriac.me' # the base hostname & protocol for your site
 
 # Build settings
 markdown:            kramdown
@@ -11,7 +11,7 @@ relative_permalinks: false
 permalink:           :title/
 
 pagination:          true
-paginate:            8
+paginate:            10
 paginate_path:       page/:num/
 
 sass:
