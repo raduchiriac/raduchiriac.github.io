@@ -1,1 +1,1 @@
-Radu Chiriac
+Jekyll powering blog.RaduChiriac.me

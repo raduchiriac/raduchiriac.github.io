@@ -30,7 +30,7 @@ Gruntplugins are half community half official NPM packages that take care of the
 
 In our development process we need at least: Browserify to watch for file changes, bundle all into one big JS file and run a live reloading server. To do that we need to install the followings:
 
-{% highlight scss %}
+{% highlight perl %}
 npm install grunt-browserify grunt-contrib-connect grunt-contrib-watch --save-dev
 {% endhighlight %}
 
