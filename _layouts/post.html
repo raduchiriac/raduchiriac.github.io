@@ -28,37 +28,10 @@ layout: default
     </article>
 
     <footer class="post-meta">
-        <div class="meta">
-            <h3 class="meta-title">Date</h3>
-            <span class="meta-content">{{ page.date | date: "%B %-d, %Y" }}</span>
-        </div>
-        {% if page.author %}
-        <div class="meta">
-            <h3 class="meta-title">Author</h3>
-            <span class="meta-content">{{ page.author }}</span>
-        </div>
-        {% endif %}
-        {% if page.show_categories %}
-        <div class="meta">
-            <h3 class="meta-title">Categories</h3>
-            <span class="meta-content">
-                {% for category in page.categories %}
-                    {{ category | capitalize }}&nbsp;
-                {% endfor %}
-            </span>
-        </div>
-        {% endif %}
-        {% if page.show_tags %}
-        <div class="meta">
-            <h3 class="meta-title">Tags</h3>
-            <span class="meta-content">
-                {% for tag in page.tags %}
-                    {{ tag | capitalize }}&nbsp;
-                {% endfor %}
-            </span>
-        </div>
-        {% endif %}
+        {% include meta.html %}
     </footer>
 
     {% include share.html %}
 </div>
+
+{% include comments.html %}

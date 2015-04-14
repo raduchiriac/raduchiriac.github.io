@@ -14,7 +14,7 @@
   z-index: 10;
 
   @include media-query($on-palm) {
-    background: rgba($background-color, .95);
+    background: white;
     width: 100%;
   }
 }
@@ -369,4 +369,10 @@ line-height: 3em;
       }
     }
   }
+}
+
+.backstretch {
+  @include media-query($on-laptop) {
+        display:none;
+      }
 }

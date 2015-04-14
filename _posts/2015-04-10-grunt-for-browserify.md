@@ -6,7 +6,8 @@ backgrounds:
     - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/code-screen.jpg
     - http://www.branded3.com/uploads/2014/08/503944255.jpg
     - http://avocaventures.com/wp-content/uploads/2014/11/lines-of-code.jpg
-thumb: http://adrianmejia.com/images/grunt.jpg
+thumb: /assets/img/content/grunt.jpg
+comments: true
 categories: web development
 tags: nodejs grunt browserify watchify
 author: Radu Chiriac

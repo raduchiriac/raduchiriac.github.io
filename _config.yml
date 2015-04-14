@@ -16,6 +16,7 @@ paginate_path:       page/:num/
 
 sass:
     sass_dir: _sass
+    sourcemap: true
     style:    compressed
 
 defaults:
