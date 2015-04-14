@@ -11,13 +11,18 @@ home: true
     {% endif %}
     {% for post in source %}
       <li>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-list-link">
-          <div class="post-list-info">
-            <h2 class="post-list-title">{{ post.title }}</h2>
-            <span class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-          </div>
-        </a>
-        <img src="{{ post.thumb }}" class="post-list-thumb" />
+        <div class="categories">
+          <i class="fa fa-code"></i>
+        </div>
+        <div class="to-overflow">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-list-link">
+            <div class="post-list-info">
+              <h2 class="post-list-title">{{ post.title }}</h2>
+              <span class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+            </div>
+          </a>
+        </div>
+          <img src="{{ post.thumb }}" class="post-list-thumb" />
       </li>
     {% endfor %}
   </ul>

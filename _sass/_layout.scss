@@ -71,7 +71,7 @@
 }
 .post-back-home{
   font-family:$base-font-family-sans;
-  color:black;
+  color:#333;
   text-align:center;
   -webkit-box-shadow: inset 0px -10px 10px -3px rgba(0,0,0,0.1);
 -moz-box-shadow: inset 0px -10px 10px -3px rgba(0,0,0,0.1);
@@ -83,6 +83,12 @@ line-height: 3em;
   right: $spacing-unit;
   font-size:14px;
   top: -3em;
+  @include transition($transition-fast);
+  &:hover {
+    color:#000;
+    line-height:4em;
+    top:-4em;
+  }
 }
 .post-list {
   display: -webkit-box;
@@ -94,12 +100,28 @@ line-height: 3em;
   list-style: none;
   @include flex-wrap(wrap);
 
+  .categories {
+      position: absolute;
+      left: 4px;
+      top: -10px;
+      z-index:5;
+    .fa {
+      -webkit-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.1);
+-moz-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.1);
+box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.1);
+      color: white;
+      padding: 5px;
+      border-radius: 15px;
+      font-size: 16px;
+      background:gray;
+    }
+  }
+
   > li {
     border: 10px solid transparent;
     color: $text-color-light;
     flex-grow: 1;
     height: 200px;
-    overflow: hidden;
     position: relative;
     width: 46%;
     @include transition($transition-base);
@@ -158,6 +180,10 @@ line-height: 3em;
 }
 .rss-subscribe {
   text-align: center;
+}
+.fa-code {
+  background: #dd1616 !important;
+  font-weight:bold;
 }
 
 /*

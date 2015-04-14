@@ -10,7 +10,6 @@ thumb: /assets/img/content/grunt.jpg
 comments: true
 categories: web development
 tags: nodejs grunt browserify watchify
-author: Radu Chiriac
 ---
 
 If you - like me, like to use Browserify to speedup the process of developing your web apps, you will very soon feel the need of any sort of tasks that can lead you to a more continuous development ecosystem. Let’s begin.
@@ -31,7 +30,7 @@ Gruntplugins are half community half official NPM packages that take care of the
 
 In our development process we need at least: Browserify to watch for file changes, bundle all into one big JS file and run a live reloading server. To do that we need to install the followings:
 
-{% highlight perl %}
+{% highlight css %}
 npm install grunt-browserify grunt-contrib-connect grunt-contrib-watch --save-dev
 {% endhighlight %}
 
