@@ -10,6 +10,7 @@ thumb: /assets/img/content/grunt.jpg
 comments: true
 categories: web development
 tags: nodejs grunt browserify watchify
+size: single
 ---
 
 If you - like me, like to use Browserify to speedup the process of developing your web apps, you will very soon feel the need of any sort of tasks that can lead you to a more continuous development ecosystem. Let’s begin.

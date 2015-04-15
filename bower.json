@@ -1,0 +1,29 @@
+{
+  "name": "blog.raduchiriac.me",
+  "version": "0.0.1",
+  "homepage": "https://github.com/raduchiriac/raduchiriac.github.io",
+  "authors": [
+    "Radu Chiriac <contact@raduchiriac.me>"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "blog",
+    "jekyll"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "RRSSB": "~1.6.5",
+    "jquery": "~2.1.3",
+    "Slidebars": "~0.10.2"
+  }
+}
