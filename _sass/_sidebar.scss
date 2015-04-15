@@ -14,12 +14,13 @@
   }
 }
 .avatar {
-    text-align:center;
-    margin:$spacing-unit 0;
-  img{
-    border-radius:70px;
-    width:140px;
-    padding-bottom:$spacing-unit/2;
+  text-align: center;
+  margin: $spacing-unit 0;
+
+  img {
+    border-radius: 70px;
+    width: 140px;
+    padding-bottom: $spacing-unit/2;
   }
 }
 .sb-slidebar {
@@ -29,11 +30,11 @@
   z-index: 2;
 
   .site-title {
-    color:white;
+    color: white;
     font-size: 26px;
     letter-spacing: 2px;
     margin: -$spacing-unit 0 $spacing-unit/2;
-text-align:center;
+    text-align: center;
   }
   .site-info {
     bottom: 0;
@@ -44,7 +45,7 @@ text-align:center;
     position: absolute;
     text-align: center;
     width: 100%;
-    color:gray;
+    color: gray;
 
     p {
       margin: 0;
@@ -61,7 +62,7 @@ text-align:center;
 
     .active {
       a {
-        background-color: rgba($light-color, .04);
+        background-color: rgba($light-color, .1);
       }
     }
     > li {
