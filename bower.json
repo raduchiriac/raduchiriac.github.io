@@ -24,6 +24,7 @@
   "devDependencies": {
     "RRSSB": "~1.6.5",
     "jquery": "~2.1.3",
-    "Slidebars": "~0.10.2"
+    "Slidebars": "~0.10.2",
+    "isotope": "~2.2.0"
   }
 }
