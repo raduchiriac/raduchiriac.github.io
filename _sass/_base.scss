@@ -21,6 +21,13 @@ body {
   line-height: $base-line-height;
   -webkit-text-size-adjust: 100%;
 }
+@font-face {
+  font-family: 'hemmet';
+  src: url('../fonts/hemmet_personal_use_only-webfont.eot');
+  src: url('../fonts/hemmet_personal_use_only-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/hemmet_personal_use_only-webfont.woff2') format('woff2'), url('../fonts/hemmet_personal_use_only-webfont.woff') format('woff'), url('../fonts/hemmet_personal_use_only-webfont.ttf') format('truetype'), url('../fonts/hemmet_personal_use_only-webfont.svg#hemmet_personal_use_onlyRg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm

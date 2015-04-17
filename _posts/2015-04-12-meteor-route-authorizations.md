@@ -10,3 +10,5 @@ categories: web development
 tags: meteor iron-router
 author: Radu Chiriac
 ---
+
+Let's dive into a probably more common issue of any big Meteor application. Once your website grows, you will have some routes that won't be public to the common people. Pages where your _admin interface_ will be, or your analytics, logs and so on.
