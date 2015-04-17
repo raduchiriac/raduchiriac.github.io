@@ -2,6 +2,11 @@
 layout: default
 home: true
 ---
+<ul class="iso-categories">
+  <li class="category"><a href="#" class="code"><span class="code">Web Development</span><i class="fa fa-code"></i></a></li>
+  <li class="category"><a href="#" class="tree"><span class="tree">Outside</span><i class="fa fa-tree"></i></a></li>
+  <li class="category"><a href="#" class="music"><span class="music">Music</span><i class="fa fa-music"></i></a></li>
+</ul>
 <div class="home">
   <ul class="post-list">
     {% if site.pagination %}
@@ -12,7 +17,9 @@ home: true
     {% for post in source %}
       <li>
         <div class="categories">
-          <i class="fa fa-code"></i>
+          {% if post.categories contains 'web' %}
+            <i class="fa fa-code"></i>
+          {% endif %}
         </div>
         <div class="to-overflow">
           <a href="{{ post.url | prepend: site.baseurl }}" class="post-list-link">
