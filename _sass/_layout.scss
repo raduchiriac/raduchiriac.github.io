@@ -25,14 +25,17 @@
 .home {
   padding-top: $spacing-unit;
 }
-.fa-code, a.code:hover span.code, a.code:hover .fa-code {
+.fa-code, a.code:hover span.code, a.code:hover .fa-code, a.selected span.code, a.selected .fa-code {
   background: #dd1616;
 }
-.fa-tree, a.tree:hover span.tree, a.tree:hover .fa-tree {
+.fa-tree, a.outside:hover span.outside, a.outside:hover .fa-tree, a.selected span.outside, a.selected .fa-tree {
   background: #007f12;
 }
-.fa-music, a.music:hover span.music, a.music:hover .fa-music {
+.fa-music, a.music:hover span.music, a.music:hover .fa-music, a.selected span.music, a.selected .fa-music {
   background: #006aed;
+}
+.iso-categories .fa {
+  background: $light-color;
 }
 .no_pagination {
   display: none;
@@ -91,15 +94,19 @@
     display: inline-block;
     position: relative;
     border-radius: $radius;
+    transition: $transition-nav;
 
     a {
       display: block;
       color: $dark-color;
       font-size: 12px;
       transition: none;
+      outline: none;
+      opacity: 0.5;
 
-      &:hover {
+      &:hover, &.selected {
         color: white;
+        opacity: 1;
       }
       span {
         border-radius: $radius*2;
@@ -111,7 +118,6 @@
         border-radius: 20px;
         padding: 0 6px;
         margin-left: -20px;
-        background: $light-color;
       }
     }
   }

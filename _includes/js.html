@@ -24,6 +24,37 @@
             $.backstretch('pause');
         }
 
+        // ISOTOPE FILTERING
+        var setupFilter = function(filter) {
+            if(!!filter) {
+                if(!!$('.iso-categories .category:not(".hide") a.'+filter).length) {
+                    $('.iso-categories .category a').removeClass('selected');
+                    $('.iso-categories .category a.'+filter).addClass('selected');
+                    $('.post-list .item').each(function(index, item){
+                        if(!$(item).hasClass(filter)) {
+                            $(item).hide();
+                        } else {
+                            $(item).show();
+                        }
+                    });
+                    window.location.hash = (filter);
+                } else {
+                    window.location.hash = '';
+                }
+            }
+        }
+
+        setupFilter(window.location.hash.substr(1));
+        var $container = $('.post-list');
+        $('.iso-categories .category a').on('click', function(evt) {
+            evt.preventDefault();
+            $('.iso-categories .category a').removeClass('selected');
+            var $_target = $(evt.currentTarget),
+                filter = $_target.data('filter');
+                $_target.addClass('selected');
+            setupFilter(filter);
+        });
+
         $(document).on('scrollstop', function () {
             if (steps.length > 0) {
                 var percentage = scrollPercentage();

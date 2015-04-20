@@ -3,9 +3,9 @@ layout: default
 home: true
 ---
 <ul class="iso-categories">
-  <li class="category"><a href="#" class="code"><span class="code">Web Development</span><i class="fa fa-code"></i></a></li>
-  <li class="category"><a href="#" class="tree"><span class="tree">Outside</span><i class="fa fa-tree"></i></a></li>
-  <li class="category"><a href="#" class="music"><span class="music">Music</span><i class="fa fa-music"></i></a></li>
+  <li class="category"><a href="#code" data-filter="code" class="code"><span class="code">Web Development</span><i class="fa fa-code"></i></a></li>
+  <li class="category hide"><a href="#outside" data-filter="outside" class="outside"><span class="outside">Outside</span><i class="fa fa-tree"></i></a></li>
+  <li class="category hide"><a href="#music" data-filter="music" class="music"><span class="music">Music</span><i class="fa fa-music"></i></a></li>
 </ul>
 <div class="home">
   <ul class="post-list">
@@ -15,7 +15,7 @@ home: true
       {% assign source = site.posts %}
     {% endif %}
     {% for post in source %}
-      <li>
+      <li class="item {% if post.categories contains 'web' %}code{% endif %}">
         <div class="categories">
           {% if post.categories contains 'web' %}
             <i class="fa fa-code"></i>
@@ -30,7 +30,7 @@ home: true
           </a>
         </div>
           <img src="{{ post.thumb }}" class="post-list-thumb" />
-      </li>
+      </dli>
     {% endfor %}
   </ul>
   <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->

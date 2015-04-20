@@ -12,6 +12,8 @@
   background: white;
   padding: $spacing-unit/2;
   border-radius: $radius 0 0 $radius;
+  -webkit-box-shadow: 0 0 4px 0 rgba(black, 0.1);
+  box-shadow: 0 0 4px 0 rgba(black, 0.1);
 
   &:hover {
     color: black;
