@@ -13,32 +13,33 @@ tags: nodejs grunt browserify watchify
 grid: 40
 ---
 
-If you - like me, like to use Browserify to speedup the process of developing your web apps, you will very soon feel the need of any sort of tasks that can lead you to a more continuous development ecosystem. Let’s begin.
+If you - like me, like to use Browserify to speedup the process of developing your web apps, you will very soon feel the need of any sort of automated tasks that can lead you to a more continuous development ecosystem. Let’s begin.
 
 #### Why Browserify?
 
-Browserify lets you write code for the browser as you would write it in Node.js. Every time you would like to use a NPM package you would do a simple `npm install awesome_package` followed by a `var awesome = require('awesome_package')`. Good news, you can now agnostically use `require()` with Browserify, which will take care of bundling your files, dependency injections and caching.
+Because you need that important step before your code gets bundled and deployed. Browserify lets you write code for the browser in the same way you would write it in Node.js. Every time you like to use a NPM package you would do a simple `npm install awesome_package` followed by a `var awesome = require('awesome_package')`. Good news is that you can now agnostically use `require()` inside your code for the client using Browserify. It will take care of bundling all your files, handle dependency injections and file caching.
 
-> You can even create your own modules that you will `require()` in the same way as you would with a package. When you load a module, make sure you start its path by either a `../` or `./` without adding the `.js` extension. `require('data/module1.js');` is wrong, as it will look for a NPM package named *data*.The way to do it is `require('./data/module');`
+> You can also create your own custom modules that you will `require()` in the same way as you would do with a package. When you load a module, make sure you start the path by either a `../` or `./` (without adding the `.js` extension). `require('data/module1.js');` is wrong, as it will not be resolved relatively, but rather as a NPM package named *data* from your *node_modules* directory. The way to do it is `require('./data/module');`
 
-#### Grunt to the rescue
+#### When Grunt comes to the rescue
 
-As more and more peers say “*Hello Gulp, it’s nice to meet you!*”, we will still use Grunt for the time being. Grunt is a task runner that effortlessly lets you automate your pain in the _ss jobs. Before you continue make sure you read this page [http://gruntjs.com/getting-started](http://gruntjs.com/getting-started), where you will learn how to install the *command line interface*, create a `Gruntfile.js` and add a *gruntplugin*.
+As more and more of my peers say “*Hello Gulp, it’s nice to meet you!*”, we will still use Grunt for the time being. Grunt is a task runner that effortlessly lets you automate your pain in the _ss jobs. Before you continue make sure you read this page [http://gruntjs.com/getting-started](http://gruntjs.com/getting-started), where you will learn how to install the *command line interface*, create a `Gruntfile.js` and add a simple *gruntplugin*.
 
 #### Where are my gruntplugins?
 
-Gruntplugins are half community half official NPM packages that take care of the most common tasks such as: minification, compilation, unit testing, linting. Official packages have the word *contrib* in their name.
+Gruntplugins are half community half official NPM packages that take care of the most common tasks such as: minification, compilation, unit testing, linting, etc. Official maintained packages have the word *contrib* in their name.
 
-In our development process we need at least: Browserify to watch for file changes, bundle all into one big JS file and run a live reloading server. To do that we need to install the followings:
+In a clean development environment we need at least: Browserify to watch for file changes, bundle all into one big JS file and run a live reloading server. To do that we need to install the followings:
 
 {% highlight css %}
-npm install grunt-browserify grunt-contrib-connect grunt-contrib-watch --save-dev
+npm install grunt-browserify grunt-contrib-connect grunt-contrib-watch connect-livereload --save-dev
 {% endhighlight %}
 
 #### Source
 
-Lets take a look at the final Gruntfile.js
+This will be the file that will contain all our tasks:
 
+<div class="filename">Gruntfile.js</div>
 {% highlight javascript %}
 module.exports = function (grunt) {
   grunt.initConfig({
@@ -84,16 +85,16 @@ module.exports = function (grunt) {
 };
 {% endhighlight %}
 
-`grunt.loadNpmTasks()` loads the above installed gruntplugins and `grunt.registerTask()` creates our task (giving it the alias *serve*). You can even pass parameters to the task as in our case *dev*. Imagine you would have multiple configuration in your *Gruntfile.js* for production and development where in production you would set the `browserifyOptions { debug: false }` for exemple.
+`grunt.loadNpmTasks()` loads the above installed gruntplugins and `grunt.registerTask()` creates our main task (giving it the alias *serve*). You can even pass parameters to the indivitual tasks (like in our case *dev*). Imagine you would have multiple configuration in your *Gruntfile.js* for production and development environments; where in production you would set the `browserifyOptions { debug: false }` for exemple.
 
-> `debug` creates the *sourcemap* for your bundled JS.
+> `debug` creates the *sourcemap* for your bundled.js file. Also if for exemple, you will ever use *transforms* with your bundle, you can add them like this: `transform: ['hbsfy']` in your `browserifyOptions {}` object.
 
-`connect` task with `connect-livereload` package creates a server and uses live reload by creating a mirror server on a different port. Your HTTP server will have it’s base in the *dist/* folder.
+`connect` task uses the `connect-livereload` package to start a mirrored server on a different port and watch for file changes. Your HTTP server will have it’s root in the *dist/* folder.
 
-We are finally ready to run our Gruntfile main task. Go to your terminal and type `grunt serve`. Your web app is currently running port 8080, files were just being bundled and are currently watched for updates. Live reload acts as a middleware  and the browser will automagically reload with the new files.
+We are finally ready to run our Gruntfile main task, *serve*. Go to your terminal and type `grunt serve`. Your web app is currently running port 8080, files were just being bundled and are currently watched for updates. Live reload acts as a middleware and the browser will automagically reload with the new files.
 
-#### Until next time
+#### To conclude
 
-As a very proud Meteor developer, I find this kind of development very challenging and time consuming; but once you get pass the boilerplate phase, Grunt can be a lot of fun. I personally like the amount of debug information Grunt tasks give you compared to Meteor. Even if the latter has everything of the above amazingly packed inside the box, it’s often complicated to trace bugs in Meteor if you were to read the terminal output only.
+As a very proud Meteor developer, I find this kind of development process very challenging and time consuming; but once you get pass the boilerplate phase, Grunt can be a lot of fun. I personally like the amount of debug information Grunt tasks give you, compared to Meteor. Even if the latter has everything of the above amazingly packed inside the box, it’s often complicated to trace bugs in Meteor if you were to read the terminal outputs only.
 
 Long live well-written NPM packages!

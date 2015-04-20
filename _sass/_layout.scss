@@ -96,6 +96,7 @@
       display: block;
       color: $dark-color;
       font-size: 12px;
+      transition: none;
 
       &:hover {
         color: white;
@@ -151,9 +152,9 @@
     width: 46%;
     @include transition($transition-base);
 
-    /* &:first-child {
-                                                                                                                        width: 100%;
-      } */
+    &:first-child {
+      // width: 100%;
+    }
     &:last-child {
       margin-bottom: $spacing-unit;
     }
@@ -232,6 +233,14 @@
    ========================================================================== */
 .post-header {
   padding: $spacing-unit 0;
+}
+.filename {
+  background: lightgrey;
+  color: white;
+  margin-left: -$spacing-unit;
+  margin-right: -$spacing-unit;
+  padding: 0 $spacing-unit;
+  font-size: 20px;
 }
 .post-back-home {
   -webkit-box-shadow: inset 0px -10px 10px -3px rgba(0, 0, 0, 0.1);
