@@ -266,8 +266,8 @@
 
   &:hover {
     color: #000;
-    line-height: 4em;
-    top: -4em;
+    line-height: 5em;
+    top: -5em;
     opacity: 1;
   }
 }
@@ -332,6 +332,14 @@
 
     @include media-query($on-laptop) {
       font-size: 18px;
+    }
+  }
+  a {
+    text-decoration: underline;
+  }
+  &.about-content {
+    a {
+      text-decoration: none;
     }
   }
 }

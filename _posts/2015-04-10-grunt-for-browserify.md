@@ -13,7 +13,7 @@ tags: nodejs grunt browserify watchify
 grid: 40
 ---
 
-If you - like me, like to use Browserify to speedup the process of developing your web apps, you will very soon feel the need of any sort of automated tasks that can lead you to a more continuous development ecosystem. Let’s begin.
+If you - like me, like to use Browserify to speedup the process of developing your web applications, you will very soon feel the need of any sort of automated tasks that can lead you to a more continuous development ecosystem. Let’s begin.
 
 #### Why Browserify?
 
@@ -23,7 +23,7 @@ Because you need that important step before your code gets bundled and deployed.
 
 #### When Grunt comes to the rescue
 
-As more and more of my peers say “*Hello Gulp, it’s nice to meet you!*”, we will still use Grunt for the time being. Grunt is a task runner that effortlessly lets you automate your pain in the _ss jobs. Before you continue make sure you read this page [http://gruntjs.com/getting-started](http://gruntjs.com/getting-started), where you will learn how to install the *command line interface*, create a `Gruntfile.js` and add a simple *gruntplugin*.
+As more and more of my peers say “*Hello Gulp, it’s nice to meet you!*”, we will still use Grunt for the time being. Grunt is a task runner that effortlessly lets you automate your pain in the _ss jobs. Before you continue make sure you read this page [gruntjs.com/getting-started](http://gruntjs.com/getting-started){:target="_blank"}, where you will learn how to install the *command line interface*, create a `Gruntfile.js` and add a simple *gruntplugin*.
 
 #### Where are my gruntplugins?
 
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
 
 `connect` task uses the `connect-livereload` package to start a mirrored server on a different port and watch for file changes. Your HTTP server will have it’s root in the *dist/* folder.
 
-We are finally ready to run our Gruntfile main task, *serve*. Go to your terminal and type `grunt serve`. Your web app is currently running port 8080, files were just being bundled and are currently watched for updates. Live reload acts as a middleware and the browser will automagically reload with the new files.
+We are finally ready to run our Gruntfile main task, *serve*. Go to your terminal and type `grunt serve`. Your web application is currently running port 8080, files were just being bundled and are currently watched for updates. Live reload acts as a middleware and the browser will automagically reload with the new files.
 
 #### To conclude
 
