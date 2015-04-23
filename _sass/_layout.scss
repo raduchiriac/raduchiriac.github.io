@@ -400,6 +400,9 @@
     }
   }
 }
+.post-comment {
+  margin-bottom: $spacing-unit/2;
+}
 .next-post {
   background: lighten($dark-color, 3%);
   color: $text-color-light;

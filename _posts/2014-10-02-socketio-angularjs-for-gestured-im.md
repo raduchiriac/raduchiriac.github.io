@@ -8,6 +8,7 @@ backgrounds:
 thumb: /assets/img/content/gesture.jpg
 categories: web development
 comments: true
+share: true
 tags: socket.io angularjs $1recognize
 ---
 Let’s see how I tried to reinvent the old instant messaging that we all know, and transform it into a fun game. The idea I had is to transform the words into gestures that you draw on the screen of your device and communicate it to the others. The game consists into challenging everyone in the *“room”* to draw the same thing and as fast as they can, and to earn points.

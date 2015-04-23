@@ -9,6 +9,7 @@ backgrounds:
 thumb: /assets/img/content/grunt.jpg
 comments: true
 categories: web development
+share: true
 tags: nodejs grunt browserify watchify
 grid: 40
 ---

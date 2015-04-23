@@ -7,6 +7,7 @@ backgrounds:
     - http://avocaventures.com/wp-content/uploads/2014/11/lines-of-code.jpg
 thumb: /assets/img/content/meteor-routing.jpg
 categories: web development
+share: true
 tags: meteor iron-router roles
 comments: true
 ---

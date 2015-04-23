@@ -31,7 +31,9 @@ layout: default
         {% include meta.html %}
     </footer>
 
-    {% include share.html %}
+    {% if page.share %}
+        {% include share.html %}
+    {% endif %}
 </div>
 
 {% include comments.html %}
