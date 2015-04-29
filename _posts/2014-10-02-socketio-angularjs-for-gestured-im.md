@@ -118,4 +118,4 @@ One of the enhancement I would like to add is hopefully the option for anyone to
 For geeks, here is again the public repository:
 [github.com/raduchiriac/lightning-gestures](https://github.com/raduchiriac/lightning-gestures){:target="_blank"}
 
-Enjoy fast drawing shapes on the screen!
+It's of course more fun to play it with your mates, so send them this link [lightning.raduchiriac.me/](http://lightning.raduchiriac.me/){:target="_blank"} and enjoy drawing shapes on the screen!
