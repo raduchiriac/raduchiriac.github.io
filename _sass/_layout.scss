@@ -159,7 +159,7 @@
     @include transition($transition-base);
 
     &:first-child {
-      // width: 100%;
+      width: 100%;
     }
     &:last-child {
       margin-bottom: $spacing-unit;

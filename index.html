@@ -5,7 +5,7 @@ home: true
 <ul class="iso-categories">
   <li class="category"><a href="#code" data-filter="code" class="code"><span class="code">Web Development</span><i class="fa fa-code"></i></a></li>
   <li class="category hide"><a href="#outside" data-filter="outside" class="outside"><span class="outside">Outside</span><i class="fa fa-tree"></i></a></li>
-  <li class="category hide"><a href="#music" data-filter="music" class="music"><span class="music">Music</span><i class="fa fa-music"></i></a></li>
+  <li class="category"><a href="#music" data-filter="music" class="music"><span class="music">Music</span><i class="fa fa-music"></i></a></li>
 </ul>
 <div class="home">
   <ul class="post-list">
@@ -15,10 +15,16 @@ home: true
       {% assign source = site.posts %}
     {% endif %}
     {% for post in source %}
-      <li class="item {% if post.categories contains 'web' %}code{% endif %}">
+      <li class="item {% if post.categories contains 'web' %}code{% endif %}{% if post.categories contains 'music' %}music{% endif %}{% if post.categories contains 'outside' %}outside{% endif %}">
         <div class="categories">
           {% if post.categories contains 'web' %}
             <i class="fa fa-code"></i>
+          {% endif %}
+          {% if post.categories contains 'music' %}
+            <i class="fa fa-music"></i>
+          {% endif %}
+          {% if post.categories contains 'outside' %}
+            <i class="fa fa-tree"></i>
           {% endif %}
         </div>
         <div class="to-overflow">
