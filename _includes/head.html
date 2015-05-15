@@ -4,8 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,300italic,400,400italic,700italic,700">
@@ -18,6 +16,7 @@
     <link rel="stylesheet" href="{{ "/assets/css/vendors/rrssb.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
 
+    <!-- Favicons -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}">
     <link rel="icon" type="image/png" href="{{ "/assets/img/favicon-16x16.png" | prepend: site.baseurl }}" sizes="16x16">
     <link rel="icon" type="image/png" href="{{ "/assets/img/favicon-32x32.png" | prepend: site.baseurl }}" sizes="32x32">
@@ -44,9 +43,15 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
+    <!-- facebook -->
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="{{ page.thumb | prepend: site.baseurl }}" />
+
+    <!-- Google+ -->
+    <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
+    <meta itemprop="image" content="{{ page.thumb | prepend: site.baseurl }}" />
 </head>
